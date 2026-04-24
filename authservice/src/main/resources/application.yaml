@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /ae
+
+spring:
+  application:
+    name: authservice
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ae?currentSchema=auth
+    username: postgres
+    password: myPassword
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update
+        format_sql: true
+    show-sql: true
+
